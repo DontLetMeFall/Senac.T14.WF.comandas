@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Comandas
 {
-    public partial class FrmPedidoCozinha : Form
+    public partial class FrmUsuario : Form
     {
-        public FrmPedidoCozinha()
+        public FrmUsuario()
         {
             InitializeComponent();
-        }
-
-        private void FrmPedidoCozinha_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

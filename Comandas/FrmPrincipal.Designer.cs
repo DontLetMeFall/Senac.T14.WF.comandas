@@ -29,32 +29,60 @@
         private void InitializeComponent()
         {
             dreamForm1 = new ReaLTaiizor.Forms.DreamForm();
+            button1 = new ReaLTaiizor.Controls.Button();
             foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
             btnPedidosCozinha = new ReaLTaiizor.Controls.Button();
             btnUsuarios = new ReaLTaiizor.Controls.Button();
             btnCardapio = new ReaLTaiizor.Controls.Button();
             btnComanda = new ReaLTaiizor.Controls.Button();
+            button2 = new ReaLTaiizor.Controls.Button();
             dreamForm1.SuspendLayout();
             foreverGroupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // dreamForm1
             // 
+            dreamForm1.BackColor = Color.Black;
             dreamForm1.ColorA = Color.FromArgb(40, 218, 255);
             dreamForm1.ColorB = Color.FromArgb(63, 63, 63);
             dreamForm1.ColorC = Color.Teal;
             dreamForm1.ColorD = Color.FromArgb(27, 27, 27);
             dreamForm1.ColorE = Color.FromArgb(0, 0, 0, 0);
             dreamForm1.ColorF = Color.FromArgb(25, 255, 255, 255);
+            dreamForm1.Controls.Add(button2);
+            dreamForm1.Controls.Add(button1);
             dreamForm1.Controls.Add(foreverGroupBox1);
             dreamForm1.Dock = DockStyle.Fill;
+            dreamForm1.ForeColor = Color.Black;
             dreamForm1.Location = new Point(0, 0);
             dreamForm1.Name = "dreamForm1";
             dreamForm1.Size = new Size(790, 448);
             dreamForm1.TabIndex = 0;
             dreamForm1.TabStop = false;
-            dreamForm1.TitleAlign = HorizontalAlignment.Center;
+            dreamForm1.Text = "Sistema de Comandas";
+            dreamForm1.TitleAlign = HorizontalAlignment.Left;
             dreamForm1.TitleHeight = 25;
+            dreamForm1.Enter += dreamForm1_Enter;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Transparent;
+            button1.BorderColor = Color.Transparent;
+            button1.EnteredBorderColor = Color.Transparent;
+            button1.EnteredColor = Color.Transparent;
+            button1.Font = new Font("Segoe UI Symbol", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Image = null;
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.InactiveColor = Color.Transparent;
+            button1.Location = new Point(718, 0);
+            button1.Name = "button1";
+            button1.PressedBorderColor = Color.Transparent;
+            button1.PressedColor = Color.Transparent;
+            button1.Size = new Size(66, 26);
+            button1.TabIndex = 4;
+            button1.Text = "X";
+            button1.TextAlignment = StringAlignment.Center;
+            button1.Click += button1_Click;
             // 
             // foreverGroupBox1
             // 
@@ -67,11 +95,11 @@
             foreverGroupBox1.Controls.Add(btnCardapio);
             foreverGroupBox1.Controls.Add(btnComanda);
             foreverGroupBox1.Font = new Font("Segoe UI", 10F);
-            foreverGroupBox1.Location = new Point(21, 186);
+            foreverGroupBox1.Location = new Point(21, 209);
             foreverGroupBox1.Name = "foreverGroupBox1";
             foreverGroupBox1.ShowArrow = true;
             foreverGroupBox1.ShowText = true;
-            foreverGroupBox1.Size = new Size(738, 225);
+            foreverGroupBox1.Size = new Size(738, 165);
             foreverGroupBox1.TabIndex = 4;
             foreverGroupBox1.TextColor = Color.FromArgb(35, 168, 109);
             // 
@@ -85,14 +113,15 @@
             btnPedidosCozinha.Image = null;
             btnPedidosCozinha.ImageAlign = ContentAlignment.MiddleLeft;
             btnPedidosCozinha.InactiveColor = Color.FromArgb(61, 94, 94);
-            btnPedidosCozinha.Location = new Point(372, 53);
+            btnPedidosCozinha.Location = new Point(358, 40);
             btnPedidosCozinha.Name = "btnPedidosCozinha";
             btnPedidosCozinha.PressedBorderColor = Color.Transparent;
             btnPedidosCozinha.PressedColor = Color.Transparent;
-            btnPedidosCozinha.Size = new Size(151, 87);
+            btnPedidosCozinha.Size = new Size(151, 72);
             btnPedidosCozinha.TabIndex = 2;
             btnPedidosCozinha.Text = "Pedidos Cozinha";
             btnPedidosCozinha.TextAlignment = StringAlignment.Center;
+            btnPedidosCozinha.Click += btnPedidosCozinha_Click;
             // 
             // btnUsuarios
             // 
@@ -104,14 +133,15 @@
             btnUsuarios.Image = null;
             btnUsuarios.ImageAlign = ContentAlignment.MiddleLeft;
             btnUsuarios.InactiveColor = Color.FromArgb(61, 94, 94);
-            btnUsuarios.Location = new Point(547, 53);
+            btnUsuarios.Location = new Point(515, 40);
             btnUsuarios.Name = "btnUsuarios";
             btnUsuarios.PressedBorderColor = Color.Transparent;
             btnUsuarios.PressedColor = Color.Transparent;
-            btnUsuarios.Size = new Size(151, 87);
+            btnUsuarios.Size = new Size(151, 72);
             btnUsuarios.TabIndex = 3;
             btnUsuarios.Text = "Usuários";
             btnUsuarios.TextAlignment = StringAlignment.Center;
+            btnUsuarios.Click += btnUsuarios_Click;
             // 
             // btnCardapio
             // 
@@ -123,14 +153,15 @@
             btnCardapio.Image = null;
             btnCardapio.ImageAlign = ContentAlignment.MiddleLeft;
             btnCardapio.InactiveColor = Color.FromArgb(61, 94, 94);
-            btnCardapio.Location = new Point(29, 53);
+            btnCardapio.Location = new Point(44, 40);
             btnCardapio.Name = "btnCardapio";
             btnCardapio.PressedBorderColor = Color.Transparent;
             btnCardapio.PressedColor = Color.Transparent;
-            btnCardapio.Size = new Size(151, 87);
+            btnCardapio.Size = new Size(151, 72);
             btnCardapio.TabIndex = 0;
             btnCardapio.Text = "Cardapio";
             btnCardapio.TextAlignment = StringAlignment.Center;
+            btnCardapio.Click += btnCardapio_Click;
             // 
             // btnComanda
             // 
@@ -142,14 +173,35 @@
             btnComanda.Image = null;
             btnComanda.ImageAlign = ContentAlignment.MiddleLeft;
             btnComanda.InactiveColor = Color.FromArgb(61, 94, 94);
-            btnComanda.Location = new Point(200, 53);
+            btnComanda.Location = new Point(201, 40);
             btnComanda.Name = "btnComanda";
             btnComanda.PressedBorderColor = Color.Transparent;
             btnComanda.PressedColor = Color.Transparent;
-            btnComanda.Size = new Size(151, 87);
+            btnComanda.Size = new Size(151, 72);
             btnComanda.TabIndex = 1;
             btnComanda.Text = "Comanda";
             btnComanda.TextAlignment = StringAlignment.Center;
+            btnComanda.Click += btnComanda_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Transparent;
+            button2.BorderColor = Color.Transparent;
+            button2.EnteredBorderColor = Color.Transparent;
+            button2.EnteredColor = Color.Transparent;
+            button2.Font = new Font("Segoe UI Symbol", 25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Image = null;
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.InactiveColor = Color.Transparent;
+            button2.Location = new Point(660, 0);
+            button2.Name = "button2";
+            button2.PressedBorderColor = Color.Transparent;
+            button2.PressedColor = Color.Transparent;
+            button2.Size = new Size(66, 26);
+            button2.TabIndex = 5;
+            button2.Text = "-";
+            button2.TextAlignment = StringAlignment.Center;
+            button2.Click += button2_Click;
             // 
             // FrmPrincipal
             // 
@@ -178,5 +230,7 @@
         private ReaLTaiizor.Controls.Button btnCardapio;
         private ReaLTaiizor.Controls.Button btnUsuarios;
         private ReaLTaiizor.Controls.ForeverGroupBox foreverGroupBox1;
+        private ReaLTaiizor.Controls.Button button1;
+        private ReaLTaiizor.Controls.Button button2;
     }
 }

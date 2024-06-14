@@ -16,5 +16,15 @@ namespace Comandas
         {
             InitializeComponent();
         }
+
+        private void hopeTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
