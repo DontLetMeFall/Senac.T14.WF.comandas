@@ -34,7 +34,11 @@
             foreverGroupBox1 = new ReaLTaiizor.Controls.ForeverGroupBox();
             button3 = new ReaLTaiizor.Controls.Button();
             button4 = new ReaLTaiizor.Controls.Button();
+            bigTextBox1 = new ReaLTaiizor.Controls.BigTextBox();
+            bigTextBox2 = new ReaLTaiizor.Controls.BigTextBox();
+            btnCardapio = new ReaLTaiizor.Controls.Button();
             dreamForm1.SuspendLayout();
+            foreverGroupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // dreamForm1
@@ -106,6 +110,9 @@
             foreverGroupBox1.ArrowColorH = Color.FromArgb(60, 70, 73);
             foreverGroupBox1.BackColor = Color.Transparent;
             foreverGroupBox1.BaseColor = Color.FromArgb(42, 52, 52);
+            foreverGroupBox1.Controls.Add(btnCardapio);
+            foreverGroupBox1.Controls.Add(bigTextBox2);
+            foreverGroupBox1.Controls.Add(bigTextBox1);
             foreverGroupBox1.Font = new Font("Segoe UI", 10F);
             foreverGroupBox1.Location = new Point(12, 41);
             foreverGroupBox1.Name = "foreverGroupBox1";
@@ -153,6 +160,59 @@
             button4.Text = "Excluir";
             button4.TextAlignment = StringAlignment.Center;
             // 
+            // bigTextBox1
+            // 
+            bigTextBox1.BackColor = Color.Transparent;
+            bigTextBox1.Font = new Font("Tahoma", 11F);
+            bigTextBox1.ForeColor = Color.DimGray;
+            bigTextBox1.Image = null;
+            bigTextBox1.Location = new Point(20, 26);
+            bigTextBox1.MaxLength = 32767;
+            bigTextBox1.Multiline = false;
+            bigTextBox1.Name = "bigTextBox1";
+            bigTextBox1.ReadOnly = false;
+            bigTextBox1.Size = new Size(735, 50);
+            bigTextBox1.TabIndex = 10;
+            bigTextBox1.Text = "bigTextBox1";
+            bigTextBox1.TextAlignment = HorizontalAlignment.Left;
+            bigTextBox1.UseSystemPasswordChar = false;
+            // 
+            // bigTextBox2
+            // 
+            bigTextBox2.BackColor = Color.Transparent;
+            bigTextBox2.Font = new Font("Tahoma", 11F);
+            bigTextBox2.ForeColor = Color.DimGray;
+            bigTextBox2.Image = null;
+            bigTextBox2.Location = new Point(20, 115);
+            bigTextBox2.MaxLength = 32767;
+            bigTextBox2.Multiline = false;
+            bigTextBox2.Name = "bigTextBox2";
+            bigTextBox2.ReadOnly = false;
+            bigTextBox2.Size = new Size(735, 50);
+            bigTextBox2.TabIndex = 11;
+            bigTextBox2.Text = "bigTextBox2";
+            bigTextBox2.TextAlignment = HorizontalAlignment.Left;
+            bigTextBox2.UseSystemPasswordChar = false;
+            // 
+            // btnCardapio
+            // 
+            btnCardapio.BackColor = Color.Transparent;
+            btnCardapio.BorderColor = Color.FromArgb(32, 34, 37);
+            btnCardapio.EnteredBorderColor = Color.FromArgb(165, 37, 37);
+            btnCardapio.EnteredColor = Color.FromArgb(32, 34, 37);
+            btnCardapio.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCardapio.Image = null;
+            btnCardapio.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCardapio.InactiveColor = Color.FromArgb(61, 94, 94);
+            btnCardapio.Location = new Point(20, 184);
+            btnCardapio.Name = "btnCardapio";
+            btnCardapio.PressedBorderColor = Color.Transparent;
+            btnCardapio.PressedColor = Color.Transparent;
+            btnCardapio.Size = new Size(201, 35);
+            btnCardapio.TabIndex = 12;
+            btnCardapio.Text = "+Item Cardapio";
+            btnCardapio.TextAlignment = StringAlignment.Center;
+            // 
             // FrmCardapioCad
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -163,6 +223,7 @@
             Name = "FrmCardapioCad";
             Text = "FrmCardapioCad";
             dreamForm1.ResumeLayout(false);
+            foreverGroupBox1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -174,5 +235,8 @@
         private ReaLTaiizor.Controls.ForeverGroupBox foreverGroupBox1;
         private ReaLTaiizor.Controls.Button button4;
         private ReaLTaiizor.Controls.Button button3;
+        private ReaLTaiizor.Controls.BigTextBox bigTextBox2;
+        private ReaLTaiizor.Controls.BigTextBox bigTextBox1;
+        private ReaLTaiizor.Controls.Button btnCardapio;
     }
 }
