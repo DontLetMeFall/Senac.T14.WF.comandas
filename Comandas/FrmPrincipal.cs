@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace Comandas
 {
     public partial class FrmPrincipal : Form
@@ -5,8 +7,21 @@ namespace Comandas
         public FrmPrincipal()
         {
             InitializeComponent();
+            CriarBancoDeDados();
         }
-
+         
+        private void CriarBancoDeDados()
+        {
+            //criar uma variavel do tipo BananaContext
+            //usar a variavel e acessar o contexto
+            //executar a migração 
+            using (var banco = new BananaContext())
+            {
+                //executa a Migração
+                banco.Database.Migrate();
+            }
+           
+        }
         private void dreamForm1_Enter(object sender, EventArgs e)
         {
 
