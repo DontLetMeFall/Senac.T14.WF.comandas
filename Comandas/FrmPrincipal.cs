@@ -15,7 +15,7 @@ namespace Comandas
             //criar uma variavel do tipo BananaContext
             //usar a variavel e acessar o contexto
             //executar a migração 
-            using (var banco = new BananaContext())
+            using (var banco = new ComandaContext())
             {
                 //executa a Migração
                 banco.Database.Migrate();

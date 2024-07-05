@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Comandas
 {
     //classe que representa o banco de dados
-    public class BananaContext : DbContext
+    public class ComandaContext : DbContext
     {
         //propriedade que representa a tabela usuarios
         public DbSet<Usuario> Usuarios { get; set; }

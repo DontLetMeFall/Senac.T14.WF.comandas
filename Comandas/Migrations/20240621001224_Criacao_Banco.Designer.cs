@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Comandas.Migrations
 {
-    [DbContext(typeof(BananaContext))]
+    [DbContext(typeof(ComandaContext))]
     [Migration("20240621001224_Criacao_Banco")]
     partial class Criacao_Banco
     {
